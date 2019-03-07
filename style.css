@@ -1,0 +1,17 @@
+#d1{background-color:orange;font-style:italic;margin-top:10px;width=100%;height=70px;padding-right=200px;}
+#division{top:50%;left:20%;}
+
+table
+{
+	border:2px solid black;
+	width:500px;
+	height:400px;
+	margin-left:30%;
+}
+
+tr,td
+{
+	padding:5%;
+	border:2px solid black;
+}
+a{text-decoration:none;}

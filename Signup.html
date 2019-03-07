@@ -1,0 +1,103 @@
+<html>
+<head>
+
+<title>
+Login
+</title>
+<style>
+a{text-decoration:none;
+margin-left:30%;}
+body{
+background-image:url('c.gif');background-repeat:no-repeat;
+background-size:cover;
+margin:0;
+padding:0;
+}
+.Container
+{
+border:3px solid;
+width:280px;
+height:280px;
+position:absolute;
+top:10%;
+left:35%;
+background-color:white;
+padding:5%;
+
+
+}
+.i{padding:6%; margin-left:30px; width:250px;}
+#s{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding:5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left:80px;
+  margin-top:10px;
+  
+}
+</style>
+
+<script>
+function validation()
+{
+
+var result1=true;
+var result2=true;
+var i=document.getElementsByClassName("i");
+if (i[0].value.length>=0 && i[0].value.length<=6 && i[1].value.length>=0 && i[1].value.length<=6)
+result1=false;
+var e=document.getElementsByName("email")[0].value;
+var i1=e.indexOf('@');
+var i2=e.lastIndexOf('.');
+if(i1<1 ||i2>=e.length-2 ||i2-i1<3)
+result2=false;
+if(result1 ==false|| result2==false)
+
+alert("enter valid credentials... ");
+
+
+
+
+return(result1 && result2);
+
+}
+
+
+
+</script>
+</head>
+<body>
+
+<div align='center' class="Container">
+<h1>Registration Page</h1>
+<form action='mail.php' method='post' onsubmit="return validation()">
+<table cellspacing="10">
+<tr>
+<td><input required class="i" type='text' name='username' placeholder='Username(at least 7 characters)'/></td>
+</tr>
+
+<tr>
+<td><input  required class="i" type='password' name='password' placeholder='Password(at least 7 characters)'/></td>
+</tr>
+<tr>
+<td><input required class="i" required  type='text' name='email' placeholder='Email'/></td>
+
+</tr>
+
+<tr>
+<td><input id="s" type='Submit' value='Submit' /></td>
+</tr>
+
+
+</table> 
+</form>
+
+</div>
+
+</body>
+</html>
